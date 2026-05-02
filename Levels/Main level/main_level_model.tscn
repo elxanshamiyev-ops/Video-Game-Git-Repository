@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bv6iiyjjdp3p5"]
+
+[ext_resource type="Material" uid="uid://dikrtdhjii06v" path="res://assets/Textures/Wood_2.tres" id="1_6cv5w"]
+[ext_resource type="PackedScene" uid="uid://b2gdjl7nqca2d" path="res://Levels/Main level/Main_Level_1.glb" id="1_f0l6g"]
+[ext_resource type="Material" uid="uid://b117x1ecjc1rl" path="res://assets/Textures/Concrete_Walls.tres" id="2_f0l6g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erg3f"]
+albedo_color = Color(7.2677435e-06, 0.4974506, 0.2777733, 1)
+
+[node name="Main_Level_Model" unique_id=1241688390 instance=ExtResource("1_f0l6g")]
+
+[node name="Main court" parent="." index="0" unique_id=264864363]
+surface_material_override/0 = ExtResource("1_6cv5w")
+
+[node name="Jailor office" parent="." index="1" unique_id=1575775618]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Power zone" parent="." index="2" unique_id=338578331]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Equipment depo" parent="." index="3" unique_id=59394787]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Kitchen" parent="." index="4" unique_id=718301073]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail Floor" parent="." index="5" unique_id=909166434]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail House" parent="." index="6" unique_id=395681940]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail house 2nd floor" parent="." index="7" unique_id=842724983]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail house 2nd floor_001" parent="." index="8" unique_id=598988424]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Mines" parent="." index="9" unique_id=895561454]
+surface_material_override/0 = ExtResource("1_6cv5w")
+
+[node name="Sever floor" parent="." index="10" unique_id=958828719]
+surface_material_override/0 = SubResource("StandardMaterial3D_erg3f")
+
+[node name="Sever Platforms" parent="." index="11" unique_id=1177065402]
+surface_material_override/0 = ExtResource("2_f0l6g")

@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://v8rocihv774c"]
+
+[ext_resource type="Script" uid="uid://bdfxg1wlwqt51" path="res://Player/player.gd" id="1_vyvq2"]
+[ext_resource type="Shader" uid="uid://dnburvkrdr07a" path="res://Player/VHS.gdshader" id="2_4ntmi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kww3p"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kww3p"]
+
+[sub_resource type="Animation" id="Animation_4ntmi"]
+resource_name = "Fade_In"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_btcbx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gwnis"]
+_data = {
+&"Fade_In": SubResource("Animation_4ntmi"),
+&"RESET": SubResource("Animation_btcbx")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_btcbx"]
+shader = ExtResource("2_4ntmi")
+shader_parameter/color_levels = 31.302001391845
+shader_parameter/chromatic_aberration = 0.0
+shader_parameter/blur_amount = 1.0
+shader_parameter/brightness = 1.2
+shader_parameter/saturation = 1.0
+shader_parameter/color_offset_multiplier = 0.004
+shader_parameter/black_offset_multiplier = 0.1
+shader_parameter/color_offset = 0.005
+
+[node name="Player" type="CharacterBody3D" unique_id=1118869229]
+script = ExtResource("1_vyvq2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1990707257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_kww3p")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=265180362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, -0.100000024)
+
+[node name="InteractRayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1857286854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.100000024)
+target_position = Vector3(0, 0, -5)
+collide_with_areas = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=364303068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_kww3p")
+
+[node name="FloorDetectRayCast" type="RayCast3D" parent="." unique_id=1595267053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="PlayerFootstepSound" type="AudioStreamPlayer3D" parent="." unique_id=564301685]
+
+[node name="InteractLabel" type="Label" parent="." unique_id=472945914]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Interact"
+
+[node name="FadeIn" type="ColorRect" parent="." unique_id=1636737752]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="FadeInAnimationPlayer" type="AnimationPlayer" parent="FadeIn" unique_id=256886266]
+libraries/ = SubResource("AnimationLibrary_gwnis")
+
+[node name="Crosshair" type="Polygon2D" parent="." unique_id=275762431]
+position = Vector2(103.692184, 58.856537)
+scale = Vector2(0.6786379, 0.6786379)
+color = Color(1, 1, 1, 0.44705883)
+polygon = PackedVector2Array(318.73822, 174.08911, 321.6853, 174.08911, 322, 183, 330.52655, 182.93036, 330.52655, 185.87744, 322, 186, 321.6853, 194.71869, 318.73822, 194.71869, 319, 186, 309.89697, 185.87744, 309.89697, 182.93036, 319, 183)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1650664241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+omni_range = 3.0
+
+[node name="VHSShader" type="ColorRect" parent="." unique_id=369755287]
+material = SubResource("ShaderMaterial_btcbx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = 8.0
+offset_right = -5.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4

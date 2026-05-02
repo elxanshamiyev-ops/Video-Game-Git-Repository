@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dhxuno5qxtdpq"]
+
+[ext_resource type="Texture2D" uid="uid://c5m1rrt2efv40" path="res://assets/Textures/worn_planks_diff_256.jpg" id="1_bc0w4"]
+
+[resource]
+albedo_texture = ExtResource("1_bc0w4")

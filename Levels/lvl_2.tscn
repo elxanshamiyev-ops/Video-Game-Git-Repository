@@ -1,0 +1,438 @@
+[gd_scene format=3 uid="uid://x4vkjp3nkypy"]
+
+[ext_resource type="Script" uid="uid://bwe36apcn0bqp" path="res://Levels/lvl_1.gd" id="1_42nws"]
+[ext_resource type="Texture2D" uid="uid://0kw8e151l3wi" path="res://assets/Textures/worn_planks_diff_2k.png" id="2_xmdno"]
+[ext_resource type="Material" uid="uid://b117x1ecjc1rl" path="res://assets/Textures/Concrete_Walls.tres" id="3_t5odh"]
+[ext_resource type="Texture2D" uid="uid://c5m1rrt2efv40" path="res://assets/Textures/worn_planks_diff_256.jpg" id="4_0thx4"]
+[ext_resource type="PackedScene" uid="uid://v8rocihv774c" path="res://Player/player.tscn" id="5_no1ke"]
+[ext_resource type="PackedScene" uid="uid://nnfjdl44ereu" path="res://assets/Interactables/Interactable.tscn" id="6_vd54t"]
+[ext_resource type="PackedScene" uid="uid://26w304ohnp4h" path="res://Scenes/Snake.tscn" id="7_i4byc"]
+[ext_resource type="PackedScene" uid="uid://dfcaet7l3q6bi" path="res://assets/Models/Sconce.glb" id="8_pmx4a"]
+[ext_resource type="PackedScene" uid="uid://bwlgl4xorrv8k" path="res://assets/Models/Rich Bed.glb" id="9_yepbq"]
+[ext_resource type="PackedScene" uid="uid://clb66r7cbfyb6" path="res://assets/Models/ModelScenes/closet_2.tscn" id="10_y6qxo"]
+[ext_resource type="PackedScene" uid="uid://fp82ygain6k" path="res://Scenes/door.tscn" id="11_o7pcr"]
+[ext_resource type="PackedScene" uid="uid://cf3bai8dak01x" path="res://assets/Interactables/Key.tscn" id="12_s2qlr"]
+[ext_resource type="PackedScene" uid="uid://dd84owqgers7e" path="res://Scenes/next_level_access_area.tscn" id="13_xmdno"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l83r"]
+albedo_texture = ExtResource("2_xmdno")
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_n2awe"]
+material = SubResource("StandardMaterial3D_6l83r")
+subdivide_width = 1
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dxsan"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bxvs1"]
+material = ExtResource("3_t5odh")
+subdivide_width = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a85hy"]
+albedo_texture = ExtResource("4_0thx4")
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_dxsan"]
+material = SubResource("StandardMaterial3D_a85hy")
+
+[sub_resource type="BoxMesh" id="BoxMesh_vkbf1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vkbf1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vkbf1"]
+points = PackedVector3Array(-0.5, -1, 0, -0.49765074, -1, -0.049040705, -0.49765074, -1, 0.048942864, -0.5, 1, 0, -0.4904072, -1, -0.097592026, -0.49765074, 1, -0.049040705, -0.4904072, -1, 0.097494125, -0.49765074, 1, 0.048942864, -0.47856304, -1, -0.14516446, -0.4904072, 1, -0.097592026, -0.47856304, -1, 0.14506656, -0.4904072, 1, 0.097494125, -0.46202037, -1, -0.1913665, -0.47856304, 1, -0.14516446, -0.46202037, -1, 0.19126862, -0.47856304, 1, 0.14506656, -0.44097495, -1, -0.23570868, -0.46202037, 1, -0.1913665, -0.44097495, -1, 0.23561078, -0.46202037, 1, 0.19126862, -0.41581833, -1, -0.27779955, -0.44097495, 1, -0.23570868, -0.41581833, -1, 0.27770162, -0.44097495, 1, 0.23561078, -0.38655052, -1, -0.31724745, -0.41581833, 1, -0.27779955, -0.38655052, -1, 0.31714958, -0.41581833, 1, 0.27770162, -0.35356304, -1, -0.35356304, -0.38655052, 1, -0.31724745, -0.35356304, -1, 0.35346514, -0.38655052, 1, 0.31714958, -0.31724745, -1, -0.38655052, -0.35356304, 1, -0.35356304, -0.31724745, -1, 0.38645262, -0.35356304, 1, 0.35346514, -0.27779955, -1, -0.41581833, -0.31724745, 1, -0.38655052, -0.27779955, -1, 0.41572046, -0.31724745, 1, 0.38645262, -0.23570868, -1, -0.44097495, -0.27779955, 1, -0.41581833, -0.23570868, -1, 0.44087708, -0.27779955, 1, 0.41572046, -0.1913665, -1, -0.46202037, -0.23570868, 1, -0.44097495, -0.1913665, -1, 0.46192247, -0.23570868, 1, 0.44087708, -0.14516446, -1, -0.47856304, -0.1913665, 1, -0.46202037, -0.14516446, -1, 0.47846514, -0.1913665, 1, 0.46192247, -0.097592026, -1, -0.4904072, -0.14516446, 1, -0.47856304, -0.097592026, -1, 0.4903093, -0.14516446, 1, 0.47846514, -0.049040705, -1, -0.49765074, -0.097592026, 1, -0.4904072, -0.049040705, -1, 0.49755287, -0.097592026, 1, 0.4903093, 0, -1, -0.5, -0.049040705, 1, -0.49765074, 0, -1, 0.5, -0.049040705, 1, 0.49755287, 0.048942864, -1, -0.49765074, 0, 1, -0.5, 0.048942864, -1, 0.49755287, 0, 1, 0.5, 0.097494125, -1, -0.4904072, 0.048942864, 1, -0.49765074, 0.097494125, -1, 0.4903093, 0.048942864, 1, 0.49755287, 0.14506656, -1, -0.47856304, 0.097494125, 1, -0.4904072, 0.14506656, -1, 0.47846514, 0.097494125, 1, 0.4903093, 0.19126862, -1, -0.46202037, 0.14506656, 1, -0.47856304, 0.19126862, -1, 0.46192247, 0.14506656, 1, 0.47846514, 0.23561078, -1, -0.44097495, 0.19126862, 1, -0.46202037, 0.23561078, -1, 0.44087708, 0.19126862, 1, 0.46192247, 0.27770162, -1, -0.41581833, 0.23561078, 1, -0.44097495, 0.27770162, -1, 0.41572046, 0.23561078, 1, 0.44087708, 0.31714958, -1, -0.38655052, 0.27770162, 1, -0.41581833, 0.31714958, -1, 0.38645262, 0.27770162, 1, 0.41572046, 0.35346514, -1, -0.35356304, 0.31714958, 1, -0.38655052, 0.35346514, -1, 0.35346514, 0.31714958, 1, 0.38645262, 0.38645262, -1, -0.31724745, 0.35346514, 1, -0.35356304, 0.38645262, -1, 0.31714958, 0.35346514, 1, 0.35346514, 0.41572046, -1, -0.27779955, 0.38645262, 1, -0.31724745, 0.41572046, -1, 0.27770162, 0.38645262, 1, 0.31714958, 0.44087708, -1, -0.23570868, 0.41572046, 1, -0.27779955, 0.44087708, -1, 0.23561078, 0.41572046, 1, 0.27770162, 0.46192247, -1, -0.1913665, 0.44087708, 1, -0.23570868, 0.46192247, -1, 0.19126862, 0.44087708, 1, 0.23561078, 0.47846514, -1, -0.14516446, 0.46192247, 1, -0.1913665, 0.47846514, -1, 0.14506656, 0.46192247, 1, 0.19126862, 0.4903093, -1, -0.097592026, 0.47846514, 1, -0.14516446, 0.4903093, -1, 0.097494125, 0.47846514, 1, 0.14506656, 0.49755287, -1, -0.049040705, 0.4903093, 1, -0.097592026, 0.49755287, -1, 0.048942864, 0.4903093, 1, 0.097494125, 0.5, -1, 0, 0.49755287, 1, -0.049040705, 0.49755287, 1, 0.048942864, 0.5, 1, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6l83r"]
+points = PackedVector3Array(-0.50896335, -0.6584358, -0.88351536, -0.6064358, -0.28593507, -0.9794826, 0.5118197, -0.6584358, -0.88351536, -0.54323936, -0.6584358, -0.8670867, -0.6064358, -0.17013174, -0.9794826, 0.60941124, -0.28593507, -0.9794826, -0.55764, -0.6584358, -0.8278183, -0.6064358, -0.28593507, 1.0672846, 0.5460957, -0.6584358, -0.8670867, -0.55764, 0.5244471, -0.9562421, 0.60941124, -0.17013174, -0.9794826, -0.6064358, -0.17013174, 1.0672846, 0.56049645, -0.6584358, -0.8278183, 0.60941124, -0.28593507, 1.0672846, -0.55764, -0.6584358, 0.91542, -0.5450246, -0.6584358, 0.9566919, -0.50896335, -0.6584358, 0.9711171, 0.56049645, 0.5244471, -0.9562421, -0.55764, 0.5244471, -0.88351536, -0.50896335, 0.57390475, -0.9197785, 0.60941124, -0.17013174, 1.0672846, -0.55764, 0.27510798, 1.0438437, 0.56049645, -0.6584358, 0.91542, 0.5118197, -0.6584358, 0.9711171, 0.547881, -0.6584358, 0.9566919, 0.5118197, 0.57390475, -0.9197785, 0.56049645, 0.5244471, -0.88351536, -0.50896335, 0.33011454, 1.0073802, 0.56049645, 0.27510798, 1.0438437, 0.5118197, 0.33011454, 1.0073802)
+
+[node name="LVL1" type="Node" unique_id=602652135]
+script = ExtResource("1_42nws")
+
+[node name="Floors and walls" type="Node" parent="." unique_id=1535023716]
+
+[node name="WoodFloor" type="MeshInstance3D" parent="Floors and walls" unique_id=800062953 groups=["WoodTerrain"]]
+transform = Transform3D(31.757648, 0, 0, 0, 0.032756045, 0, 0, 0, 42.659225, -6.6991396, -4.6, -15)
+mesh = SubResource("BoxMesh_n2awe")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor" unique_id=261956019 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor/WoodFloor" unique_id=1653005026 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor20" type="MeshInstance3D" parent="Floors and walls" unique_id=2076847034 groups=["WoodTerrain"]]
+transform = Transform3D(-4.6775804e-06, 0, 43.51242, 0, 0.052409682, 0, -107.010574, 0, -1.9019883e-06, -43.39914, -0.099999905, -17.800001)
+mesh = SubResource("BoxMesh_n2awe")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor20" unique_id=1466559433 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor20/WoodFloor" unique_id=1775564540 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor2" type="MeshInstance3D" parent="Floors and walls" unique_id=1731260296 groups=["WoodTerrain"]]
+transform = Transform3D(-1.3326443e-06, -0.032756045, 0, -1.3326442e-06, 6.25865e-17, 21.32961, -30.48734, 1.4318122e-09, -9.3234684e-07, -55.69914, 9.9, 22)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor2" unique_id=1861666491 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor2/WoodFloor" unique_id=1864038503 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor7" type="MeshInstance3D" parent="Floors and walls" unique_id=815226812 groups=["WoodTerrain"]]
+transform = Transform3D(-1.3326443e-06, -0.032756045, 0, -1.3326442e-06, 6.25865e-17, 21.32961, -30.48734, 1.4318122e-09, -9.3234684e-07, -39.69914, 8.9, -2.2)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor7" unique_id=582686881 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor7/WoodFloor" unique_id=1115970697 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor16" type="MeshInstance3D" parent="Floors and walls" unique_id=323828568 groups=["WoodTerrain"]]
+transform = Transform3D(-1.2593487e-06, -0.032756045, 0, -1.2593487e-06, 6.25865e-17, 21.32961, -28.810535, 1.4318122e-09, -9.3234684e-07, -34.69914, 9.9, -27.400002)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor16" unique_id=420270471 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor16/WoodFloor" unique_id=1569452940 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor17" type="MeshInstance3D" parent="Floors and walls" unique_id=1908692693 groups=["WoodTerrain"]]
+transform = Transform3D(-1.2593487e-06, -0.032756045, 0, -1.2593487e-06, 6.25865e-17, 21.32961, -28.810535, 1.4318122e-09, -9.3234684e-07, -24.699139, 9.9, -27.500002)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor17" unique_id=2050343778 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor17/WoodFloor" unique_id=1081815513 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor8" type="MeshInstance3D" parent="Floors and walls" unique_id=302734428 groups=["WoodTerrain"]]
+transform = Transform3D(-1.3326443e-06, -0.032756045, 0, -1.3326442e-06, 6.25865e-17, 21.32961, -30.48734, 1.4318122e-09, -9.3234684e-07, -57.69914, 9.9, -56.6)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor8" unique_id=1238792573 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor8/WoodFloor" unique_id=1062042977 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor9" type="MeshInstance3D" parent="Floors and walls" unique_id=1122557483 groups=["WoodTerrain"]]
+transform = Transform3D(-1.3326443e-06, -0.032756045, 0, -1.3326442e-06, 6.25865e-17, 21.32961, -30.48734, 1.4318122e-09, -9.3234684e-07, -24.699139, 9.9, -58.5)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor9" unique_id=952388828 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor9/WoodFloor" unique_id=324035561 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor23" type="MeshInstance3D" parent="Floors and walls" unique_id=975873281 groups=["WoodTerrain"]]
+transform = Transform3D(-1.3326443e-06, -0.032756045, 0, -1.3326442e-06, 6.25865e-17, 21.32961, -30.48734, 1.4318122e-09, -9.3234684e-07, -24.699139, 13.3, -54)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor23" unique_id=673589406 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor23/WoodFloor" unique_id=618774675 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor10" type="MeshInstance3D" parent="Floors and walls" unique_id=1727382370 groups=["WoodTerrain"]]
+transform = Transform3D(-1.3326443e-06, -0.032756045, 0, -1.3326442e-06, 6.25865e-17, 21.32961, -30.48734, 1.4318122e-09, -9.3234684e-07, -22.699139, 9.9, 30.8)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor10" unique_id=152026113 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor10/WoodFloor" unique_id=1622795239 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor11" type="MeshInstance3D" parent="Floors and walls" unique_id=324192198 groups=["WoodTerrain"]]
+transform = Transform3D(-1.3326443e-06, -0.032756045, 0, -1.3326442e-06, 6.25865e-17, 21.32961, -30.48734, 1.4318122e-09, -9.3234684e-07, -22.699139, 9.9, 0.4)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor11" unique_id=494621719 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor11/WoodFloor" unique_id=848823266 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor12" type="MeshInstance3D" parent="Floors and walls" unique_id=1491183333 groups=["WoodTerrain"]]
+transform = Transform3D(42.682274, 0, 9.323468e-07, -1.8657015e-06, 6.258649e-17, 21.329607, -3.1832314e-13, -0.03275604, 4.0754174e-14, -42.69914, 9.9, 36)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor12" unique_id=1706171496 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor12/WoodFloor" unique_id=1729477132 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor13" type="MeshInstance3D" parent="Floors and walls" unique_id=1352510008 groups=["WoodTerrain"]]
+transform = Transform3D(42.682274, 0, 9.323468e-07, -1.8657015e-06, 6.258649e-17, 21.329607, -3.1832314e-13, -0.03275604, 4.0754174e-14, -61.19914, 9.9, 13)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor13" unique_id=2102243397 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor13/WoodFloor" unique_id=917080742 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor14" type="MeshInstance3D" parent="Floors and walls" unique_id=850312902 groups=["WoodTerrain"]]
+transform = Transform3D(42.682274, 0, 9.323468e-07, -1.8657015e-06, 6.258649e-17, 21.329607, -3.1832314e-13, -0.03275604, 4.0754174e-14, -42.69914, 9.9, -66)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor14" unique_id=1736233174 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor14/WoodFloor" unique_id=1143281917 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor19" type="MeshInstance3D" parent="Floors and walls" unique_id=1137336988 groups=["WoodTerrain"]]
+transform = Transform3D(42.682274, 0, 9.323468e-07, -1.8657015e-06, 6.258649e-17, 21.329607, -3.1832314e-13, -0.03275604, 4.0754174e-14, -56.19914, 9.9, -41)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor19" unique_id=441434759 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor19/WoodFloor" unique_id=1293356627 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="Ceiling" type="MeshInstance3D" parent="Floors and walls" unique_id=2017205492 groups=["WoodTerrain"]]
+transform = Transform3D(42.68227, 0, 2.7970405e-06, 6.6505036e-14, -0.032756038, -2.79704e-06, 1.8657014e-06, 1.4318119e-09, -63.988823, -42.69914, 8.9, -55)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/Ceiling" unique_id=1152300449 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/Ceiling/WoodFloor" unique_id=1334950782 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="Ceiling2" type="MeshInstance3D" parent="Floors and walls" unique_id=2084234252 groups=["WoodTerrain"]]
+transform = Transform3D(46.950497, 0, 2.7970405e-06, 7.315554e-14, -0.032756038, -2.79704e-06, 2.0522716e-06, 1.4318119e-09, -63.988823, -42.69914, 8.9, 9)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/Ceiling2" unique_id=1974279869 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/Ceiling2/WoodFloor" unique_id=1308514429 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor15" type="MeshInstance3D" parent="Floors and walls" unique_id=878631473 groups=["WoodTerrain"]]
+transform = Transform3D(8.536454, 0, 9.323467e-07, -3.7314027e-07, 6.258649e-17, 21.329605, -6.366462e-14, -0.03275604, 4.075417e-14, -38.89914, 9.9, -13)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor15" unique_id=1191496222 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor15/WoodFloor" unique_id=1834373266 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor21" type="MeshInstance3D" parent="Floors and walls" unique_id=1332275936 groups=["WoodTerrain"]]
+transform = Transform3D(9.219371, 0, 9.323467e-07, -4.029915e-07, 6.258649e-17, 21.329605, -6.875779e-14, -0.03275604, 4.075417e-14, -29.89914, 13.4, -13)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor21" unique_id=1531584634 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor21/WoodFloor" unique_id=863273629 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor22" type="MeshInstance3D" parent="Floors and walls" unique_id=1288883169 groups=["WoodTerrain"]]
+transform = Transform3D(9.219371, 0, -1.3425797e-07, -4.029915e-07, 6.258649e-17, -3.0714643, -6.875779e-14, -0.03275604, -5.8686026e-15, -31.299139, 1.1999996, -13)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor22" unique_id=1813612938 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor22/WoodFloor" unique_id=2117478807 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="WoodFloor18" type="MeshInstance3D" parent="Floors and walls" unique_id=1376268455 groups=["WoodTerrain"]]
+transform = Transform3D(8.536454, 0, 9.323467e-07, -3.7314027e-07, 6.258649e-17, 21.329605, -6.366462e-14, -0.03275604, 4.075417e-14, -20.99914, 9.9, -13)
+mesh = SubResource("BoxMesh_bxvs1")
+skeleton = NodePath("../..")
+
+[node name="WoodFloor" type="StaticBody3D" parent="Floors and walls/WoodFloor18" unique_id=1085948839 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/WoodFloor18/WoodFloor" unique_id=1221688390 groups=["WoodTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="MetalFloor" type="MeshInstance3D" parent="Floors and walls" unique_id=2034966259 groups=["MetalTerrain"]]
+transform = Transform3D(31.757648, 0, 0, 0, 0.032756045, 0, 0, 0, 42.659225, 31.300861, -4.1, 0)
+mesh = SubResource("BoxMesh_dxsan")
+skeleton = NodePath("../..")
+
+[node name="MetalFloor" type="StaticBody3D" parent="Floors and walls/MetalFloor" unique_id=269601122 groups=["MetalTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 8.5862665, 0, 0, 0, 0.99999964, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floors and walls/MetalFloor/MetalFloor" unique_id=1080101563 groups=["MetalTerrain"]]
+transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_dxsan")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1451119632]
+transform = Transform3D(0.26555607, -0.5625894, 0.782926, -0.9312447, -0.35986534, 0.057273895, 0.24952625, -0.7443051, -0.6194728, 402, 370.9, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 200.0
+
+[node name="Player" parent="." unique_id=1118869229 instance=ExtResource("5_no1ke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1.9000001, -25)
+
+[node name="Lights" type="Node" parent="." unique_id=1761755036]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=1341556661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 3.8999996, -5)
+omni_range = 17.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights" unique_id=1258055123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 3.8999996, 9)
+omni_range = 17.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights" unique_id=333575127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 5.9, -26)
+omni_range = 17.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" unique_id=648666744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 6.8999996, 22)
+omni_range = 17.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" unique_id=60667896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 5.9, -41)
+omni_range = 17.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights" unique_id=1320165151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 5.9, -58)
+omni_range = 22.0
+
+[node name="Models" type="Node" parent="." unique_id=465573861]
+
+[node name="InteractableCube" type="MeshInstance3D" parent="Models" unique_id=742710069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -1.0999999, 0)
+mesh = SubResource("BoxMesh_vkbf1")
+skeleton = NodePath("")
+
+[node name="Area3D" parent="Models/InteractableCube" unique_id=1052214675 instance=ExtResource("6_vd54t")]
+
+[node name="Column_1" type="MeshInstance3D" parent="Models" unique_id=219703322]
+transform = Transform3D(3.208239, 0, 0, 0, 5.450734, 0, 0, 0, -2.3315358, -1.9073486e-06, 1.1452794, 3.990427)
+mesh = SubResource("CylinderMesh_vkbf1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Models/Column_1" unique_id=396262974]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Models/Column_1/StaticBody3D" unique_id=196207475]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_vkbf1")
+
+[node name="Column_2" type="MeshInstance3D" parent="Models" unique_id=2001060771]
+transform = Transform3D(10.292796, 0, 0, 0, 9.326127, 0, 0, 0, 5.4360595, 0.13260897, 5.1124444, -11.005184)
+mesh = SubResource("CylinderMesh_vkbf1")
+skeleton = NodePath("../Column_1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Models/Column_2" unique_id=1160019372]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Models/Column_2/StaticBody3D" unique_id=1657668718]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_vkbf1")
+
+[node name="Snake" parent="Models" unique_id=279930262 instance=ExtResource("7_i4byc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+visible = false
+
+[node name="Sconce" parent="Models" unique_id=341069806 instance=ExtResource("8_pmx4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -8.1)
+visible = false
+
+[node name="Rich Bed" parent="Models" unique_id=602380506 instance=ExtResource("9_yepbq")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -42, 0, 7)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Models/Rich Bed" unique_id=336803905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.433741, -0.664451, -1.3715371)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Models/Rich Bed/StaticBody3D" unique_id=156760366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.83374, 1.164451, 0.7715378)
+shape = SubResource("ConvexPolygonShape3D_6l83r")
+
+[node name="Closet3" parent="Models" unique_id=1966404575 instance=ExtResource("10_y6qxo")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -44, 0, 15.7)
+
+[node name="Closet4" parent="Models" unique_id=55300369 instance=ExtResource("10_y6qxo")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -44, -2, 20.7)
+
+[node name="Door" parent="Models" unique_id=1580067405 instance=ExtResource("11_o7pcr")]
+transform = Transform3D(1.386, 0, 0, 0, 1.386, 0, 0, 0, 0.99999994, -26, 0, -13)
+is_Locked = true
+actualKey = "1"
+type = "Open"
+
+[node name="Door2" parent="Models" unique_id=1610622562 instance=ExtResource("11_o7pcr")]
+transform = Transform3D(2.9802322e-08, 0, -0.99999976, 0, 1.386, 0, 1.3860002, 0, 5.9604645e-08, -24.7, -0.1, -42.6)
+is_Locked = true
+actualKey = "2"
+type = "Open"
+
+[node name="Key" parent="." unique_id=838566943 groups=["Keys"] instance=ExtResource("12_s2qlr")]
+transform = Transform3D(-7.54979e-08, -6.600236e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, 7.54979e-08, -34.39914, 0.20000002, -44.800003)
+keyName = "1"
+type = "Take Key"
+
+[node name="Key2" parent="." unique_id=483184561 groups=["Keys"] instance=ExtResource("12_s2qlr")]
+transform = Transform3D(1, 8.742278e-08, -3.1786513e-08, 8.742278e-08, -1, 0, -3.1786513e-08, -2.7788652e-15, -1, -44.499138, 2.2, 17.199997)
+keyName = "2"
+type = "Take Key"
+
+[node name="NextLevelAccessArea" parent="." unique_id=1741283072 instance=ExtResource("13_xmdno")]
+transform = Transform3D(2.4600003, 0, 0, 0, 1, 0, 0, 0, 1, -0.4236946, -2.7413816, -16.230484)
+PathToNextLevel = "C:/Users/Elxan/OneDrive/Godot/3D Game Project 1/Video Game Git Repository/Levels/Main level/main_level.tscn"
+
+[node name="NextLevelAccessArea2" parent="." unique_id=905897820 instance=ExtResource("13_xmdno")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -3.1, -17)
+PathToNextLevel = "D:/Gamedev/3D Game Project 1/Levels/Main Level.tscn"

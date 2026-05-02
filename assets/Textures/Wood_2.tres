@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dikrtdhjii06v"]
+
+[ext_resource type="Texture2D" uid="uid://0kw8e151l3wi" path="res://assets/Textures/worn_planks_diff_2k.png" id="1_8fi8e"]
+
+[resource]
+albedo_texture = ExtResource("1_8fi8e")
+texture_filter = 0
+point_size = 29.5

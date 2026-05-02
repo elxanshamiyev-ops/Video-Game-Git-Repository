@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b117x1ecjc1rl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sgosx"]
+load_path = "res://.godot/imported/Concrete-2767-small.jpg-ba4f744009ae64d58914e1235e9b8427.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_sgosx")
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
+grow = true

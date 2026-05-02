@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://26w304ohnp4h"]
+
+[ext_resource type="PackedScene" uid="uid://bcce5ej6h3o6s" path="res://assets/Snake.glb" id="1_re1pl"]
+
+[node name="Snake" instance=ExtResource("1_re1pl")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/rotation = Quaternion(0.383845, 1.92372e-15, 9.15158e-08, 0.923397)
+bones/2/rotation = Quaternion(0.172836, -9.6938e-15, 4.12074e-08, 0.984951)
+bones/3/rotation = Quaternion(0.0442278, -3.91737e-15, 1.05447e-08, 0.999021)
+bones/4/rotation = Quaternion(-0.329015, -1.80394e-14, 3.35808e-14, 0.944325)
+bones/5/rotation = Quaternion(0.0429853, -2.76057e-14, 1.07241e-14, 0.999076)
+bones/6/rotation = Quaternion(0.367063, -1.10888e-07, -4.37573e-08, 0.930196)
+bones/7/rotation = Quaternion(0.662359, -1.33954e-06, -1.34221e-06, 0.749186)

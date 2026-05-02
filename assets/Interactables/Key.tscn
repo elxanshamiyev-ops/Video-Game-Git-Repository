@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cf3bai8dak01x"]
+
+[ext_resource type="Script" uid="uid://31evbis7c574" path="res://assets/Interactables/key.gd" id="1_qs3rc"]
+[ext_resource type="PackedScene" uid="uid://do8xo1sypxj0b" path="res://assets/Models/Key.glb" id="2_jcgqf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qs3rc"]
+
+[node name="Key" type="Area3D" unique_id=838566943 groups=["Interactable"]]
+script = ExtResource("1_qs3rc")
+
+[node name="Key" parent="." unique_id=74070061 instance=ExtResource("2_jcgqf")]
+transform = Transform3D(6.212174, 0, 0, 0, 4.1932626, 0, 0, 0, 6.212174, -0.0022159815, -0.03342831, -0.084347665)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1522712311]
+transform = Transform3D(0.7161926, 0, 0, 0, 0.037807755, 0, 0, 0, 0.99999994, 0, 0, 0)
+shape = SubResource("BoxShape3D_qs3rc")
