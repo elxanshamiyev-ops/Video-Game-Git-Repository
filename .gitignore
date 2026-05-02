@@ -14,3 +14,11 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Map image files
+*.kra
+Underground map.png
+GameMapSurface.png
+
+#2D assets folder (It's a temorary folder for miscellanious images will delete later)
+C:\Users\Elxan\OneDrive\Godot\3D Game Project 1\Video Game Git Repository\2D assets
