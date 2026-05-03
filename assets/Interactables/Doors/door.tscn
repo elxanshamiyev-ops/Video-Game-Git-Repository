@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://fp82ygain6k"]
+[gd_scene format=4 uid="uid://dit16r6ta0cw"]
 
 [ext_resource type="Script" uid="uid://dvgdv3p2w82k8" path="res://Scenes/door.gd" id="1_p0e35"]
 [ext_resource type="Texture2D" uid="uid://pevxaedkb2y4" path="res://assets/Models/Door_Wood Planks.jpg" id="1_w6aom"]
@@ -488,7 +488,7 @@ mesh = SubResource("ArrayMesh_88tt1")
 skeleton = NodePath("")
 
 [node name="Door handle_001" type="MeshInstance3D" parent="Doorframe/Door" unique_id=529439513]
-transform = Transform3D(-0.0027088968, -0.8181814, 0.06382474, 0.04975041, -0.063224256, -0.82532614, 0.983832, 0.00094435987, 0.041910827, 0.7660407, -0.094467804, 0.009503722)
+transform = Transform3D(-0.002708897, -0.8181815, 0.06382474, 0.049750414, -0.06322426, -0.82532614, 0.98383206, 0.00094436004, 0.041910827, 0.7660407, -0.094467804, 0.009503722)
 mesh = SubResource("ArrayMesh_4fvqv")
 skeleton = NodePath("")
 

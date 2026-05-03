@@ -2,26 +2,45 @@
 
 [ext_resource type="PackedScene" uid="uid://bv6iiyjjdp3p5" path="res://Levels/Main level/main_level_model.tscn" id="1_1uk8m"]
 [ext_resource type="PackedScene" uid="uid://v8rocihv774c" path="res://Player/player.tscn" id="2_77chp"]
+[ext_resource type="PackedScene" uid="uid://bmw8l33d534fu" path="res://assets/Interactables/Doors/prison_door.tscn" id="3_77chp"]
 
 [node name="Main_level" type="Node3D" unique_id=1168228151]
 
-[node name="Main_Level_Model" parent="." unique_id=1241688390 instance=ExtResource("1_1uk8m")]
+[node name="Main_Level_Model" parent="." unique_id=487938999 instance=ExtResource("1_1uk8m")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
 [node name="Player" parent="." unique_id=1118869229 instance=ExtResource("2_77chp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.643215, 13.78007, -39.31626)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1361143147]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.091919, 1.5543623, -42.790043)
-light_energy = 10.0
-light_size = 1.465
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.631535, 5.8048124, -42.790043)
+light_energy = 25.0
+light_indirect_energy = 1.375
+omni_range = 71.50759
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=923112331]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.222177, 2.8373175, -42.790043)
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1689264566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.45859, 5.8048124, -42.790043)
 light_energy = 10.0
-light_size = 1.2
+light_indirect_energy = 1.375
+omni_range = 37.88
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=806386758]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.344296, 5.3150473, -42.790043)
-light_energy = 10.0
-light_size = 1.205
+[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=1710937666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.23686, -18.22036, -47.185852)
+light_energy = 25.0
+light_indirect_energy = 1.375
+omni_range = 116.71558
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1512845706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.091919, 5.8048124, 44.314472)
+light_energy = 25.0
+light_indirect_energy = 1.375
+omni_range = 71.50759
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=116747268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1506119, 5.8048124, -114.80394)
+light_energy = 25.0
+light_indirect_energy = 1.375
+omni_range = 71.50759
+
+[node name="Prison_Door" parent="." unique_id=1999373599 instance=ExtResource("3_77chp")]
+transform = Transform3D(52, 0, 0, 0, 50, 0, 0, 0, 50, -87.2866, 12.033556, -46.673847)
