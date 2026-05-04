@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bmw8l33d534fu"]
 
-[ext_resource type="PackedScene" uid="uid://nnfjdl44ereu" path="res://assets/Interactables/Interactable.tscn" id="1_wajxx"]
+[ext_resource type="Script" uid="uid://dwrdbku7el581" path="res://assets/Interactables/Doors/prison_door.gd" id="1_i71j4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5vuq"]
 resource_name = "Metallic"
@@ -111,29 +111,38 @@ _data = {
 &"Open": SubResource("Animation_ug8vo")
 }
 
-[node name="Prison_Door" type="Node3D" unique_id=1999373599]
+[sub_resource type="BoxShape3D" id="BoxShape3D_wajxx"]
+size = Vector3(1, 1, 0.5328369)
+
+[node name="Prison_Door" type="Area3D" unique_id=1213758628 groups=["Doors", "Interactable"]]
+script = ExtResource("1_i71j4")
+
+[node name="Prison_Door" type="Node3D" parent="." unique_id=1999373599]
 transform = Transform3D(10.62, 0, 0, 0, 10.62, 0, 0, 0, 10.62, 0, 0, 0)
 
-[node name="Jail house 2nd floor JailcelldoorStatic" type="MeshInstance3D" parent="." unique_id=464078502]
+[node name="Jail house 2nd floor JailcelldoorStatic" type="MeshInstance3D" parent="Prison_Door" unique_id=464078502]
 mesh = SubResource("ArrayMesh_ggixo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Jail house 2nd floor JailcelldoorStatic" unique_id=61213744]
+[node name="StaticBody3D" type="StaticBody3D" parent="Prison_Door/Jail house 2nd floor JailcelldoorStatic" unique_id=61213744]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Jail house 2nd floor JailcelldoorStatic/StaticBody3D" unique_id=374430403]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prison_Door/Jail house 2nd floor JailcelldoorStatic/StaticBody3D" unique_id=374430403]
 shape = SubResource("ConcavePolygonShape3D_u6fcw")
 
-[node name="Jail house 2nd floor JailcelldoorDynamic" type="MeshInstance3D" parent="." unique_id=1931341202]
+[node name="Jail house 2nd floor JailcelldoorDynamic" type="MeshInstance3D" parent="Prison_Door" unique_id=1931341202]
 mesh = SubResource("ArrayMesh_wtof2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Jail house 2nd floor JailcelldoorDynamic" unique_id=1835689938]
+[node name="StaticBody3D" type="StaticBody3D" parent="Prison_Door/Jail house 2nd floor JailcelldoorDynamic" unique_id=1835689938]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Jail house 2nd floor JailcelldoorDynamic/StaticBody3D" unique_id=316920766]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prison_Door/Jail house 2nd floor JailcelldoorDynamic/StaticBody3D" unique_id=316920766]
 shape = SubResource("ConcavePolygonShape3D_wresx")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=618224176]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Prison_Door" unique_id=618224176]
 libraries/ = SubResource("AnimationLibrary_gbpal")
 
-[node name="Interact_Area" parent="." unique_id=1052214675 instance=ExtResource("1_wajxx")]
-transform = Transform3D(6.365, 0, 0, 0, 6.365, 0, 0, 0, 6.365, -0.03694687, 0.052924864, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1218325859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.442165, 0.47678542, 0.1356546)
+shape = SubResource("BoxShape3D_wajxx")
+
+[connection signal="animation_finished" from="Prison_Door/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

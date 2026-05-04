@@ -59,19 +59,19 @@ shader_parameter/color_offset = 0.005
 script = ExtResource("1_vyvq2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1990707257]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.3)
 shape = SubResource("CapsuleShape3D_kww3p")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=265180362]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, -0.100000024)
 
 [node name="InteractRayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1857286854]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.100000024)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099999905)
 target_position = Vector3(0, 0, -5)
 collide_with_areas = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=364303068]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.3)
 mesh = SubResource("CapsuleMesh_kww3p")
 
 [node name="FloorDetectRayCast" type="RayCast3D" parent="." unique_id=1595267053]

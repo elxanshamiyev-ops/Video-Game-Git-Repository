@@ -488,7 +488,7 @@ mesh = SubResource("ArrayMesh_88tt1")
 skeleton = NodePath("")
 
 [node name="Door handle_001" type="MeshInstance3D" parent="Doorframe/Door" unique_id=529439513]
-transform = Transform3D(-0.002708897, -0.8181815, 0.06382474, 0.049750414, -0.06322426, -0.82532614, 0.98383206, 0.00094436004, 0.041910827, 0.7660407, -0.094467804, 0.009503722)
+transform = Transform3D(-0.0027088972, -0.81818163, 0.06382474, 0.049750417, -0.06322428, -0.82532614, 0.9838321, 0.00094436016, 0.041910827, 0.7660407, -0.094467804, 0.009503722)
 mesh = SubResource("ArrayMesh_4fvqv")
 skeleton = NodePath("")
 

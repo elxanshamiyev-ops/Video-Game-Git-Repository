@@ -5,48 +5,42 @@
 [ext_resource type="Material" uid="uid://b117x1ecjc1rl" path="res://assets/Textures/Concrete_Walls.tres" id="2_f0l6g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0l6g"]
-albedo_color = Color(0.1908176, 0.31172308, 9.62615e-08, 1)
+albedo_color = Color(0.33333334, 0.1254902, 0.011764706, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erg3f"]
-albedo_color = Color(7.2677435e-06, 0.4974506, 0.2777733, 1)
+[node name="Main_Level_Model" unique_id=854119149 instance=ExtResource("1_f0l6g")]
 
-[node name="Main_Level_Model" unique_id=801139152 instance=ExtResource("1_f0l6g")]
-
-[node name="Main court" parent="." index="0" unique_id=1081164776]
-surface_material_override/0 = SubResource("StandardMaterial3D_f0l6g")
-
-[node name="Jailor office" parent="." index="1" unique_id=1690740687]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Power zone" parent="." index="2" unique_id=2091465502]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Equipment depo" parent="." index="3" unique_id=1291756190]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Kitchen" parent="." index="4" unique_id=478039849]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Jail Floor" parent="." index="5" unique_id=379829624]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Jail House" parent="." index="6" unique_id=1960002252]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Jail house 2nd floor" parent="." index="7" unique_id=921087572]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Jail house 2nd floor roof" parent="." index="8" unique_id=1732918991]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Jail house 2nd floor stairs" parent="." index="9" unique_id=1391798574]
-surface_material_override/0 = ExtResource("2_f0l6g")
-
-[node name="Mines" parent="." index="11" unique_id=1797999943]
+[node name="Main court" parent="." index="0" unique_id=1680506962]
 surface_material_override/0 = ExtResource("1_6cv5w")
 
-[node name="Sever floor" parent="." index="12" unique_id=272545465]
-surface_material_override/0 = SubResource("StandardMaterial3D_erg3f")
+[node name="Jailor office" parent="." index="1" unique_id=128735741]
+surface_material_override/0 = ExtResource("2_f0l6g")
 
-[node name="Sever Platforms" parent="." index="13" unique_id=64343842]
+[node name="Power zone" parent="." index="2" unique_id=766293378]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Equipment depo" parent="." index="3" unique_id=856912058]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Kitchen" parent="." index="4" unique_id=1772665766]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail Floor" parent="." index="5" unique_id=2006177116]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail House" parent="." index="6" unique_id=205218489]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail house 2nd floor" parent="." index="7" unique_id=1847169555]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail house 2nd floor roof" parent="." index="8" unique_id=685731052]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Jail house 2nd floor stairs" parent="." index="9" unique_id=210795291]
+surface_material_override/0 = ExtResource("2_f0l6g")
+
+[node name="Mines" parent="." index="11" unique_id=1244549899]
+surface_material_override/0 = SubResource("StandardMaterial3D_f0l6g")
+
+[node name="Sever Platforms" parent="." index="13" unique_id=185613343]
 surface_material_override/0 = ExtResource("2_f0l6g")

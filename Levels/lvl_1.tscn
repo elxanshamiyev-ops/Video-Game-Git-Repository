@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dfcaet7l3q6bi" path="res://assets/Models/Sconce.glb" id="5_qxwy5"]
 [ext_resource type="PackedScene" uid="uid://bwlgl4xorrv8k" path="res://assets/Models/Rich Bed.glb" id="9_6l83r"]
 [ext_resource type="PackedScene" uid="uid://clb66r7cbfyb6" path="res://assets/Models/ModelScenes/closet_2.tscn" id="10_a85hy"]
-[ext_resource type="PackedScene" uid="uid://fp82ygain6k" path="res://Scenes/door.tscn" id="11_cd3pr"]
+[ext_resource type="PackedScene" uid="uid://dit16r6ta0cw" path="res://assets/Interactables/Doors/door.tscn" id="11_cd3pr"]
 [ext_resource type="PackedScene" uid="uid://dd84owqgers7e" path="res://Scenes/next_level_access_area.tscn" id="13_pdcxx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l83r"]
@@ -38,24 +38,6 @@ texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_dxsan"]
 material = SubResource("StandardMaterial3D_a85hy")
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vkbf1"]
-sky_top_color = Color(0.82499367, 0.9616497, 0.92042637, 1)
-sky_horizon_color = Color(1.129774, 1.2044003, 1.1939745, 1)
-ground_bottom_color = Color(0.039472584, 0.20132193, 0.20084241, 1)
-ground_horizon_color = Color(1.129774, 1.2044003, 1.1939745, 1)
-
-[sub_resource type="Sky" id="Sky_v5c3n"]
-sky_material = SubResource("ProceduralSkyMaterial_vkbf1")
-
-[sub_resource type="Environment" id="Environment_emd3i"]
-background_mode = 2
-background_energy_multiplier = 0.5
-sky = SubResource("Sky_v5c3n")
-tonemap_mode = 2
-sdfgi_enabled = true
-sdfgi_use_occlusion = true
-sdfgi_read_sky_light = false
 
 [sub_resource type="BoxMesh" id="BoxMesh_vkbf1"]
 
@@ -277,7 +259,7 @@ transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_dxsan")
 
 [node name="WoodFloor21" type="MeshInstance3D" parent="Floors and walls" unique_id=1332275936 groups=["WoodTerrain"]]
-transform = Transform3D(9.219371, 0, 9.323467e-07, -4.029915e-07, 6.258649e-17, 21.329605, -6.875779e-14, -0.03275604, 4.075417e-14, -29.89914, 13.4, -13)
+transform = Transform3D(9.219371, 0, 9.323467e-07, -4.029915e-07, 6.258649e-17, 21.329605, -6.875779e-14, -0.03275604, 4.075417e-14, -29.89914, 14.7, -13)
 mesh = SubResource("BoxMesh_bxvs1")
 skeleton = NodePath("../..")
 
@@ -289,7 +271,7 @@ transform = Transform3D(1, 0, 0, 0, 0.46501684, 0, 0, 0, 0.9999999, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_dxsan")
 
 [node name="WoodFloor22" type="MeshInstance3D" parent="Floors and walls" unique_id=1288883169 groups=["WoodTerrain"]]
-transform = Transform3D(9.219371, 0, -1.3425797e-07, -4.029915e-07, 6.258649e-17, -3.0714643, -6.875779e-14, -0.03275604, -5.8686026e-15, -31.299139, 1.1999996, -13)
+transform = Transform3D(9.219371, 0, -1.919889e-07, -4.029915e-07, 6.258649e-17, -4.392194, -6.875779e-14, -0.03275604, -8.392102e-15, -31.699139, 1.8999995, -13)
 mesh = SubResource("BoxMesh_bxvs1")
 skeleton = NodePath("../..")
 
@@ -328,9 +310,6 @@ shape = SubResource("ConvexPolygonShape3D_dxsan")
 transform = Transform3D(0.26555607, -0.5625894, 0.782926, -0.9312447, -0.35986534, 0.057273895, 0.24952625, -0.7443051, -0.6194728, 402, 370.9, 0)
 shadow_enabled = true
 directional_shadow_max_distance = 200.0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1217878686]
-environment = SubResource("Environment_emd3i")
 
 [node name="Player" parent="." unique_id=1118869229 instance=ExtResource("2_vkbf1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1.9000001, -25)
@@ -417,7 +396,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -44, 0, 15.7)
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -44, -2, 20.7)
 
 [node name="Door" parent="Models" unique_id=1580067405 instance=ExtResource("11_cd3pr")]
-transform = Transform3D(1.386, 0, 0, 0, 1.386, 0, 0, 0, 0.99999994, -26, 0, -13)
+transform = Transform3D(1.6831499, 0, 0, 0, 2.0284, 0, 0, 0, 1.157, -26.2, 0, -13)
 is_Locked = true
 actualKey = "1"
 type = "Open"

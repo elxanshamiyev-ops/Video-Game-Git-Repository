@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dikrtdhjii06v"]
 
 [resource]
-albedo_color = Color(0.26698598, 0.18652946, 0.02124419, 1)
+albedo_color = Color(0, 0.2784314, 0.003921569, 1)
 texture_filter = 0
 point_size = 29.5

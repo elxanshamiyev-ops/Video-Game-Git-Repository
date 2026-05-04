@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://bnuqxxq8k33kc"]
 
 [ext_resource type="PackedScene" uid="uid://bv6iiyjjdp3p5" path="res://Levels/Main level/main_level_model.tscn" id="1_1uk8m"]
+[ext_resource type="PackedScene" uid="uid://cf3bai8dak01x" path="res://assets/Interactables/Key.tscn" id="2_8mdhr"]
 [ext_resource type="PackedScene" uid="uid://v8rocihv774c" path="res://Player/player.tscn" id="2_77chp"]
 [ext_resource type="PackedScene" uid="uid://bmw8l33d534fu" path="res://assets/Interactables/Doors/prison_door.tscn" id="3_77chp"]
 
 [node name="Main_level" type="Node3D" unique_id=1168228151]
 
-[node name="Main_Level_Model" parent="." unique_id=487938999 instance=ExtResource("1_1uk8m")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+[node name="Main_Level_Model" parent="." unique_id=534661276 instance=ExtResource("1_1uk8m")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0.09098053, 0)
 
 [node name="Player" parent="." unique_id=1118869229 instance=ExtResource("2_77chp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.643215, 13.78007, -39.31626)
+transform = Transform3D(0, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 0, -109.43341, 11.995405, -46.81626)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1361143147]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.631535, 5.8048124, -42.790043)
@@ -42,5 +43,56 @@ light_energy = 25.0
 light_indirect_energy = 1.375
 omni_range = 71.50759
 
-[node name="Prison_Door" parent="." unique_id=1999373599 instance=ExtResource("3_77chp")]
-transform = Transform3D(52, 0, 0, 0, 50, 0, 0, 0, 50, -87.2866, 12.033556, -46.673847)
+[node name="Prison_Door" parent="." unique_id=183365893 instance=ExtResource("3_77chp")]
+transform = Transform3D(4.7076006, 0, 0, 0, 4.840846, 0, 0, 0, 4.899, -97.91831, 11.971824, -46.673847)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door6" parent="." unique_id=1213758628 instance=ExtResource("3_77chp")]
+transform = Transform3D(-4.412525, 0, 4.7683716e-07, 0, 4.840846, 0, -4.190144e-07, 0, -4.8990006, -102.15515, 11.971824, -30.017246)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door2" parent="." unique_id=1469579363 instance=ExtResource("3_77chp")]
+transform = Transform3D(4.7972865, 0, 0, 0, 4.840846, 0, 0, 0, 4.899, -92.654625, 11.971824, -46.673847)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door3" parent="." unique_id=640859169 instance=ExtResource("3_77chp")]
+transform = Transform3D(4.907995, 0, 0, 0, 4.840846, 0, 0, 0, 4.899, -87.28116, 11.971824, -46.673847)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door4" parent="." unique_id=1379165752 instance=ExtResource("3_77chp")]
+transform = Transform3D(4.907995, 0, 0, 0, 4.840846, 0, 0, 0, 4.899, -81.99525, 11.971824, -46.673847)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door5" parent="." unique_id=586715254 instance=ExtResource("3_77chp")]
+transform = Transform3D(4.8415337, 0, 0, 0, 4.840846, 0, 0, 0, 4.899, -77.020485, 11.971824, -46.673847)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door7" parent="." unique_id=1797847513 instance=ExtResource("3_77chp")]
+transform = Transform3D(-4.7972865, 0, -4.282842e-07, 0, 4.840846, 0, 4.193921e-07, 0, -4.899, -97.1863, 11.971824, -30.017244)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door8" parent="." unique_id=1829989976 instance=ExtResource("3_77chp")]
+transform = Transform3D(-4.907995, 0, -4.282842e-07, 0, 4.840846, 0, 4.2907058e-07, 0, -4.899, -92.01756, 11.971824, -30.017244)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door9" parent="." unique_id=2121337562 instance=ExtResource("3_77chp")]
+transform = Transform3D(-4.907995, 0, -4.282842e-07, 0, 4.840846, 0, 4.2907058e-07, 0, -4.899, -86.71077, 11.971824, -30.017244)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Prison_Door10" parent="." unique_id=2077429668 instance=ExtResource("3_77chp")]
+transform = Transform3D(-4.8748894, 0, -4.282842e-07, 0, 4.840846, 0, 4.2617637e-07, 0, -4.899, -81.659515, 11.971824, -30.017244)
+is_Locked = true
+actualKey = "Prison Key"
+
+[node name="Key" parent="." unique_id=838566943 groups=["Keys"] instance=ExtResource("2_8mdhr")]
+transform = Transform3D(-7.649493e-08, 1.75, 0, 7.649493e-08, 3.3436996e-15, -1.75, -1.75, -7.649493e-08, -7.649493e-08, -111.8238, 15.304131, -44.881138)
+keyName = "Prison Key"

@@ -44,15 +44,16 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact"):
 		print("interact pressed")
 		var interacted = interactRaycast.get_collider()
-		if interacted.is_in_group("Doors")and interacted.is_in_group("Interactable") and interacted.has_method("action_use"):
+		if interacted != null and interacted.is_in_group("Doors") and interacted.is_in_group("Interactable") and interacted.has_method("action_use"):
 			print(interacted.insertedKeys)
 			interacted.insertedKeys.append_array(Keys)
 			print(interacted.insertedKeys)
-		if interacted.is_in_group("Keys")and interacted.is_in_group("Interactable") and interacted.has_method("action_use"):
+		if interacted != null and interacted.is_in_group("Keys")and interacted.is_in_group("Interactable") and interacted.has_method("action_use"):
 			print(interacted.keyName)
 			Keys.append(interacted.keyName)
 		if interacted != null and interacted.is_in_group("Interactable") and interacted.has_method("action_use"):
 			interacted.action_use()
+
 	if Input.is_action_just_pressed("Inventory"):
 		print(Keys)
 
